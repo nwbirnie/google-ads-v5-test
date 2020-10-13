@@ -30,6 +30,7 @@ public class V5Test implements Runnable {
 		final Builder builder = GenerateKeywordIdeasRequest.newBuilder().setCustomerId(customerId).setUrlSeed(urlSeed);
 		final GenerateKeywordIdeasRequest request = builder.build();
 		final KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = googleAdsClient.createKeywordPlanIdeaServiceClient();
+		System.out.println("starting request");
 		final GenerateKeywordIdeasPagedResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeas(request);
 
 		for (final GenerateKeywordIdeaResult result : response.getPage().getValues()) {
