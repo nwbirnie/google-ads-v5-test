@@ -45,12 +45,12 @@ public class V5Test implements Runnable {
 		try {
 			final Map<String, String> propsMap = new HashMap<String, String>();
 			// google account email address
-			propsMap.put("serviceAccountUser", "SERVICE_ACCOUNT_USER");
+		//	propsMap.put("serviceAccountUser", "SERVICE_ACCOUNT_USER");
 			propsMap.put("clientId", "CLIENT_ID");
 			propsMap.put("clientSecret", "CLIENT_SECRET");
 			propsMap.put("refreshToken", "REFRESH_TOKEN");
 			// manager account ID
-			propsMap.put("loginCustomerId", "LOGIN_CUSTOMER_ID");
+		//	propsMap.put("loginCustomerId", "LOGIN_CUSTOMER_ID");
 			propsMap.put("developerToken", "DEVELOPER_TOKEN");
 			// see https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
 			propsMap.put("isPartialFailure", "IS_PARTIAL_FAILURE");
