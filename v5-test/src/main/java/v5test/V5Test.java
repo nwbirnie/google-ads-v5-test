@@ -25,7 +25,7 @@ public class V5Test implements Runnable {
 
 	public void run() {
 		System.out.println("starting...");
-		final String customerId = System.getenv("GOOGLE_ADS.ACCT_ID");
+		final String customerId = System.getenv("GOOGLE_ADS_ACCT_ID");
 		final UrlSeed urlSeed = UrlSeed.newBuilder().setUrl(StringValue.of("https://wordsimade.wordpress.com/2019/08/22/giants-among-us/")).build();
 		final Builder builder = GenerateKeywordIdeasRequest.newBuilder().setCustomerId(customerId).setUrlSeed(urlSeed);
 		final GenerateKeywordIdeasRequest request = builder.build();
@@ -57,7 +57,7 @@ public class V5Test implements Runnable {
 			final Map<String, String> env = System.getenv();
 			final Properties props = new Properties();
 			for (final Entry<String, String> e : propsMap.entrySet()) {
-				final String envKey = "GOOGLE_ADS." + e.getValue();
+				final String envKey = "GOOGLE_ADS_" + e.getValue();
 				final String value = env.get(envKey);
 				if (value == null) {
 					throw new Exception("Environment var not defined: " + envKey);
